@@ -1,3 +1,10 @@
 <header>
-  <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
+  <div>
+    <ul>
+      <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete %></li>
+      <li><%= link_to "マイページ", public_customers_my_page_path %></li>
+      <li><%= link_to "トップページ", root_path %></li>
+    </ul>
+  </div>
+
 </header>
