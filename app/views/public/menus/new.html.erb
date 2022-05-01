@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>献立投稿</h2>
+  <%= form_with model: @menu, url: public_menus_path do |f| %>
+  <div class="row">
+    <div class="col-5 mx-auto">
+      <table class="table">
+        <tr>
+          <td>献立画像</td>
+          <td><%= f.file_field :image, accept: "image/*" %></td>
+        </tr>
+        <tr>
+          <td>献立名</td>
+          <td><%= f.text_field :name, placeholder: "回鍋肉定食", class: "form-control" %></td>
+        </tr>
+        <tr>
+          <td>主食</td>
+          <td><%= f.text_field :syusyoku, placeholder: "ご飯", class: "form-control" %></td>
+        </tr>
+        <tr>
+          <td>主菜</td>
+          <td><%= f.text_field :syusai, placeholder: "回鍋肉", class: "form-control" %></td>
+        </tr>
+        <tr>
+          <td>副菜</td>
+          <td><%= f.text_field :fukusai, placeholder: "卵スープ", class: "form-control" %></td>
+        </tr>
+        <tr>
+          <td>作り方</td>
+          <td><%= f.text_area :introduction, placeholder: "説明文", class: "form-control" %></td>
+        </tr>
+      </table>
+      <div>
+        <%= f.submit"新規投稿", class: "btn btn-success" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

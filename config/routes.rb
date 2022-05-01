@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :public do
     get "/customers/my_page" => "customers#show" #会員情報詳細ページ（マイページ）表示
     resources :customers, only:[:edit,:update]
+    resources :menus, only:[:new,:create,:index,:show,:edit,:update,:destroy]
   end
 
 
