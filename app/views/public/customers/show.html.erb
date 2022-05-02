@@ -1,7 +1,7 @@
 <h1>マイページ</h1>
 
 <div>
- <%= link_to "新規投稿", new_public_menu_path %>    
+ <%= link_to "新規投稿", new_public_menu_path %>
 <table class="table table-borderless">
  <tr>
   <td>名前</td>
@@ -12,6 +12,7 @@
   <td><%= current_customer.email %></td>
  </tr>
 </table>
+<%= link_to "プロフィール編集", edit_public_customer_path(current_customer), class: "btn btn-warning" %>
 </div>
 
 <div>
@@ -20,16 +21,18 @@
     <h4 class="text-center">投稿一覧</h4>
     <tr>
       <th>投稿日時</th>
-      <th>タイトル</th>
-      <th>編集</th>
+      <th>献立名</th>
+      <th>表示</th>
     </tr>
   </thead>
   <tbody>
+   <% @menus.each do |menu| %>
     <tr>
-      <td></td>
-      <td></td>
-      <td><%= link_to "編集", edit_public_customer_path(current_customer), class: "btn btn-warning" %></td>
+      <td><%= menu.created_at.strftime("%Y/%-m/%-d") %></td>
+      <td><%= menu.name %></td>
+      <td><%= link_to "表示する", public_menu_path(menu), class: "btn btn-primary" %></td>
     </tr>
+    <% end %>
   </tbody>
  </table>
 </div>

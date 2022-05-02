@@ -1,2 +1,35 @@
-<h1>Public::Menus#show</h1>
-<p>Find me in app/views/public/menus/show.html.erb</p>
+<h2 class="text-center">投稿詳細</h2>
+<div class="container">
+ <div class="row justify-content-center">
+    <div class="col-5">
+     <%= image_tag @menu.image, size:"300x200" %>
+    </div>
+    <div class="col-5">
+     <table class="table table-borderless">
+        <tr>
+         <td>献立名</td>
+         <td><%= @menu.name %></td>
+        </tr>
+        <tr>
+         <td>主食</td>
+         <td><%= @menu.syusyoku %></td>
+        </tr>
+        <tr>
+         <td>主菜</td>
+         <td><%= @menu.syusai %></td>
+        </tr>
+        <tr>
+         <td>副菜</td>
+         <td><%= @menu.fukusai %></td>
+        </tr>
+        <tr>
+         <td>作り方</td>
+         <td><%= @menu.introduction %></td>
+        </tr>
+     </table>
+     <div class="text-center">
+        <%= link_to "編集", edit_public_menu_path(@menu.id), class: "btn btn-warning" %>
+     </div>
+    </div>
+ </div>
+</div>

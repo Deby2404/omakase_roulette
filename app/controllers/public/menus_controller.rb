@@ -6,10 +6,12 @@ class Public::MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     @menu.save
-    redirect_to public_menu_path(@menu.id)
+    redirect_to public_menu_path(id: current_customer)
+
   end
 
   def index
+    @menus = Menu.all
   end
 
   def show
@@ -17,9 +19,13 @@ class Public::MenusController < ApplicationController
   end
 
   def edit
+    @menu = Menu.find(params[:id])
   end
 
   def update
+    @menu = Menu.find(params[:id])
+    @menu.update(menu_params)
+    redirect_to public_menu_path(@menu)
   end
 
   def destroy

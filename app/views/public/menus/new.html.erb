@@ -1,6 +1,6 @@
 <div class="container">
   <h2>献立投稿</h2>
-  <%= form_with model: @menu, url: public_menus_path do |f| %>
+  <%= form_with model: @menu, url: public_menus_path, method: :post, local: true do |f| %>
   <div class="row">
     <div class="col-5 mx-auto">
       <table class="table">
