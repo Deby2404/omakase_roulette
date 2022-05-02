@@ -1,0 +1,23 @@
+<div class="container">
+  <h3 class="mt-5">会員一覧</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>会員ID</th>
+        <th>名前</th>
+        <th>メールアドレス</th>
+        <th>ステータス</th>
+        <th>メッセージ</th>
+      </tr>
+    </thead>
+    <% @customers.each do |customer| %>
+    <tbody>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.name %></td>
+        <td><%= customer.email %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+
+  namespace :admin do
+    get 'homes/top'
+    resources :customers, only:[:index,:show,:edit]
+  end
   root to: 'homes#top'
 
   devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
