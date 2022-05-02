@@ -1,0 +1,7 @@
+ja:
+    enums:
+      menu:
+        food_status:
+          breakfast: "朝食"
+          lunch: "昼食"
+          dinner: "夕食"
