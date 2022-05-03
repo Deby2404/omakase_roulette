@@ -34,6 +34,6 @@ class Public::MenusController < ApplicationController
 
   private
    def menu_params
-     params.require(:menu).permit(:name,:introduction,:syusyoku,:syusai,:fukusai,:image)
+     params.require(:menu).permit(:name,:introduction,:syusyoku,:syusai,:fukusai,:image,:food_status,:genre_id)
    end
 end
