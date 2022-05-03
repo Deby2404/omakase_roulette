@@ -1,5 +1,8 @@
 <h1>おまかせルーレット</h1>
  <%= link_to "新規登録", new_customer_registration_path, class: "btn btn-success" %>
  <%= link_to "ログイン", new_customer_session_path, class: "btn btn-secondary" %>
- <h3>1日分の献立</h3>
- 
+
+<div>
+ <%= link_to "1日分の献立", new_public_day_random_path, class: "btn btn-warning" %>
+ <%= link_to "1週間分の献立", new_public_week_random_path, class: "btn btn-warning" %>
+</div>

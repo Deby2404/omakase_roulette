@@ -1,0 +1,9 @@
+<h3>1日分の献立</h3>
+<%= form_with model: @menu, url: public_menus_path, method: :post, local: true do |f| %>
+<div>
+  <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  <%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+</div>
+
+<div><%= f.submit "おまかせ", class: "btn btn-primary" %> </div>
+<% end %>

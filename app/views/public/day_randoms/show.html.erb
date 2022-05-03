@@ -1,0 +1,26 @@
+<h3>1日分の献立表示</h3>
+
+<% @random.each do |menu| %>
+ <table>
+   <tr>
+     <td>献立名</td>
+     <td><%= menu.name %></td>
+   </tr>
+   <tr>
+     <td>主食</td>
+     <td><%= menu.syusyoku %></td>
+   </tr>
+   <tr>
+     <td>主菜</td>
+     <td><%= menu.syusai %></td>
+   </tr>
+   <tr>
+     <td>副菜</td>
+     <td><%= menu.fukusai %></td>
+   </tr>
+   <tr>
+     <td>作り方</td>
+     <td><%= menu.introduction %></td>
+   </tr>
+ </table>
+<% end %>
