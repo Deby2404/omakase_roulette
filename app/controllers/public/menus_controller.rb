@@ -6,6 +6,7 @@ class Public::MenusController < ApplicationController
 
   def create
     @menu = Menu.new(menu_params)
+    @menu.customer_id = current_customer.id
     @menu.save
     redirect_to public_menu_path(id: current_customer)
   end
