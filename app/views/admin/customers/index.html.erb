@@ -14,10 +14,15 @@
     <tbody>
       <tr>
         <td><%= customer.id %></td>
-        <td><%= customer.name %></td>
+        <td>
+          <%= link_to admin_customer_path (customer.id) do %>
+          <%= customer.name %>
+          <% end %>
+        </td>
         <td><%= customer.email %></td>
       </tr>
     </tbody>
     <% end %>
   </table>
+  <%= paginate @customers %>
 </div>

@@ -1,2 +1,38 @@
-<h1>Admin::Customers#show</h1>
-<p>Find me in app/views/admin/customers/show.html.erb</p>
+
+<h3><% @customer.name %> さんの投稿</h3>
+
+<table>
+  <tr>
+    <td>会員ID</td>
+    <td><%= @customer.id %></td>
+  </tr>
+  <tr>
+    <td>名前</td>
+    <td><%= @customer.name %></td>
+  </tr>
+  <tr>
+    <td>メールアドレス</td>
+    <td><%= @customer.email %></td>
+  </tr>
+  <tr>
+    <td>投稿数</td>
+    <td></td>
+  </tr>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+    <th>投稿日</th>
+    <th>献立名</th>
+    <th>表示する</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td><%= link_to "詳細", public_menu_path, class: "btn btn-primary" %></td>
+    </tr>
+  </tbody>
+</table>
