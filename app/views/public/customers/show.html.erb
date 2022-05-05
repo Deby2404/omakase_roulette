@@ -22,7 +22,6 @@
     <tr>
       <th>投稿日時</th>
       <th>献立名</th>
-      <th>表示</th>
     </tr>
   </thead>
   <tbody>
@@ -35,6 +34,7 @@
     </tr>
     <% end %>
   </tbody>
+  <%= paginate @menus %>
  </table>
 </div>
 

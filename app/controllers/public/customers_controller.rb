@@ -1,7 +1,7 @@
 class Public::CustomersController < ApplicationController
 
   def show
-    @menus = Menu.all
+    @menus = Menu.page(params[:page])
   end
 
   def edit
