@@ -1,5 +1,5 @@
 
-<h3><% @customer.name %> さんの投稿</h3>
+<h3><%= @customer.name %> さんの投稿</h3>
 
 <table>
   <tr>
@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td>投稿数</td>
-    <td></td>
+    <td><%= @customer.menus.count %></td>
   </tr>
 </table>
 
@@ -29,10 +29,12 @@
   </tr>
   </thead>
   <tbody>
+    <% @menus.each do |menu| %>
     <tr>
-      <td></td>
-      <td></td>
-      <td><%= link_to "詳細", public_menu_path, class: "btn btn-primary" %></td>
+      <td><%= menu.created_at.strftime("%Y/%m/%d") %></td>
+      <td><%= menu.name %></td>
+      <td><%= link_to "詳細", public_menu_path(menu), class: "btn btn-primary" %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
