@@ -19,6 +19,12 @@ class Admin::GenresController < ApplicationController
     @genre.update(genre_params)
     redirect_to new_admin_genre_path
   end
+  
+  def destroy
+    @genre = Genre.find(params[:id])
+    @genre.destroy
+    redirect_to request.referer
+  end
 
   private
 
