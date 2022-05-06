@@ -2,9 +2,14 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
+    get 'contacts/index'
+  end
+  get 'contacts/new'
+  namespace :admin do
     get 'homes/top'
     resources :customers, only:[:index,:show,:edit]
     resources :genres, only:[:new,:create,:edit,:update,:destroy]
+    resources :contacts, only:[:index,:edit,:update,:destroy]
   end
   root to: 'homes#top'
 
@@ -22,6 +27,9 @@ Rails.application.routes.draw do
     resources :menus, only:[:new,:create,:index,:show,:edit,:update,:destroy]
     resources :day_randoms, only:[:new,:create,:show]
     resources :week_randoms, only:[:new,:create,:show]
+    resources :contacts, only:[:new,:create]
+    get '/customers/:id/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe' #退会確認画面
+    patch '/customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal' #論理削除用ルーティング
   end
 
 
