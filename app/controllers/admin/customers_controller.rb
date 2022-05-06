@@ -5,7 +5,7 @@ class Admin::CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
-    @menus = @customer.menus
+    @menus = @customer.menus.page(params[:page])
   end
 
   def edit
