@@ -8,7 +8,7 @@ class Public::DayRandomsController < ApplicationController
     @menu = Menu.find(params[:id]) #レコードの取得
     redirect_to public_day_random_path #詳細ページに遷移
   end
-  
+
   def show
     @random = Menu.order("RANDOM()").first #ランダムなレコードを取得
   end
