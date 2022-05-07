@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   namespace :public do
     get "/customers/my_page" => "customers#show" #会員情報詳細ページ（マイページ）表示
     resources :customers, only:[:edit,:update]
-    resources :menus, only:[:new,:create,:index,:show,:edit,:update,:destroy]
     resources :day_randoms, only:[:new,:create,:show]
+    resources :menus, only:[:new,:create,:index,:show,:edit,:update,:destroy]
     resources :week_randoms, only:[:new,:create,:show]
     resources :contacts, only:[:new,:create]
     get '/customers/:id/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe' #退会確認画面

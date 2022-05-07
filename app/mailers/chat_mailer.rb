@@ -1,5 +1,5 @@
 class ChatMailer < ApplicationMailer
-  default from: 'from@example.com'
+  default from: 'dedede2404@gmail.com'
 
     def send_when_admin_reply(customer, contact) #メソッドに対して引数を設定
     @customer = customer #ユーザー情報

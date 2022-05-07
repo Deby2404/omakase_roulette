@@ -5,12 +5,15 @@ class Public::DayRandomsController < ApplicationController
   end
 
   def create
-    @menu = Menu.find(params[:id]) #レコードの取得
-    redirect_to public_day_random_path #詳細ページに遷移
+    fs = params[:food_status]
+    @menu = Menu.where("food_status = #{fs}")
+    
+    #レコードの取得
+    redirect_to public_day_random_path(@menu) #詳細ページに遷移
   end
 
   def show
-    @random = Menu.order("RANDOM()").first #ランダムなレコードを取得
+    @menus = Menu.includes(:customer).sample(1)#ランダムなレコードを取得
   end
 end
  #new画面でfood_statusとgenreを選択
