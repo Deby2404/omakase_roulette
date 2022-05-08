@@ -5,7 +5,13 @@ class Public::WeekRandomsController < ApplicationController
   end
 
   def create
-    @menus = Menu.order("RANDOM()").where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
+    @menus ={}
+    params[:menus].each{ |key, values|
+      @menus[key] = Menu.order("RANDOM()").where(genre_id: values[:genre_id]).where(food_status: values[:food_status]).limit(1)
+    }
+    render :show
+    return
+
     if @menus.present?
       redirect_to public_week_random_path(@menus.ids) #詳細ページに遷移
     else

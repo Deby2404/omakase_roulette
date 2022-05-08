@@ -3,52 +3,52 @@
 <%= form_with model: @menu, url: public_week_randoms_path, method: :post, local: true do |f| %>
 <table>
   <tr>
-    <td>月曜日</td>
+    <td>月曜日</td> 
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[mon][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[mon][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>火曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[tue][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[tue][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>水曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[wed][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[wed][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>木曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+     <%= select_tag 'menus[thu][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[thu][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>金曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[fri][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[fri][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>土曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[sat][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[sat][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
   <tr>
     <td>日曜日</td>
     <td>
-      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
-  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+      <%= select_tag 'menus[sun][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
+  　　<%= select_tag 'menus[sun][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>
     </td>
   </tr>
 </table>
