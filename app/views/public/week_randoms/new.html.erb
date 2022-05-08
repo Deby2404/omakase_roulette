@@ -1,2 +1,56 @@
-<h1>Public::WeekRandoms#new</h1>
-<p>Find me in app/views/public/week_randoms/new.html.erb</p>
+<h3>1週間分の献立</h3>
+
+<%= form_with model: @menu, url: public_week_randoms_path, method: :post, local: true do |f| %>
+<table>
+  <tr>
+    <td>月曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>火曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>水曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>木曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>金曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>土曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+  <tr>
+    <td>日曜日</td>
+    <td>
+      <%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control col-1" %>
+  　　<%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %>
+    </td>
+  </tr>
+</table>
+<div><%= f.submit "おまかせ", class: "btn btn-primary" %></div>
+<% end %>

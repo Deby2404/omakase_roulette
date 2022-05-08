@@ -1,2 +1,103 @@
-<h1>Public::WeekRandoms#show</h1>
-<p>Find me in app/views/public/week_randoms/show.html.erb</p>
+<h3>１週間分の献立表示</h3>
+
+<table>
+  <tr>
+    <td>月曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>火曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>水曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>木曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>金曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>土曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>日曜日</td>
+    <td>
+      <table>
+        <tr>
+          <td><%= @menus.food_status_i18n %></td>
+        </tr>
+        <tr>
+          <th>献立名</th>
+          <td><%= @menus.name %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<%= link_to "再度おまかせ", new_public_week_random_path, class: "btn btn-primary"  %>
