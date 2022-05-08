@@ -5,15 +5,31 @@ class Public::DayRandomsController < ApplicationController
   end
 
   def create
-    fs = params[:food_status]
-    @menu = Menu.where("food_status = #{fs}")
-    
-    #レコードの取得
-    redirect_to public_day_random_path(@menu) #詳細ページに遷移
+    @food_status = params[:food_status]
+    @menu = Menu.where("food_status = #{@food_status}")
+    @menus = Menu.order("RANDOM()").where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
+    @menu.create
+    if @menus.present?
+      redirect_to public_day_random_path(@menus.ids) #詳細ページに遷移
+    else
+        @menu = Menu.all #menuの情報全部取得
+        @genre = Genre.all #genreの情報全部取得
+        render new
+    end
   end
 
   def show
-    @menus = Menu.includes(:customer).sample(1)#ランダムなレコードを取得
+    # binding.pry
+    @menus = Menu.find(params[:id])
+    # @menus = Menu.order("RANDOM()").where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
+
+    # @menus = Menu.order("RANDOM()").limit(1)#ランダムなレコードを取得
+
+  end
+
+  private
+  def menu_params
+    params.require(:menu).permit(:food_status, :genre_id)
   end
 end
  #new画面でfood_statusとgenreを選択
