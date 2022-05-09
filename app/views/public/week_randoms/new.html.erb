@@ -6,12 +6,6 @@
     <td>月曜日</td>
     <!--f.selectだと配列で取得できないからselect_tagに書き換えた-->
     <!--key = mon tue wed　とかのこと-->
-    <tr>
-      <td>
-        <%= f.check_box :menu,{class: "check_box"}, true %>
-        <%= label_tag :menu, "おまかせ" %>
-      </td>
-    </tr>
     <td>
       <%= select_tag 'menus[mon][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-1" %>
   　　<%= select_tag 'menus[mon][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %>

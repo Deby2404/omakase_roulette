@@ -1,4 +1,5 @@
 class Public::CustomersController < ApplicationController
+   before_action :authenticate_customer!, except: [:top,:show]
 
   def show
     @menus = Menu.page(params[:page])

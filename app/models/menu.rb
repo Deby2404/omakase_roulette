@@ -10,5 +10,7 @@ class Menu < ApplicationRecord
   validates :syusyoku, presence: true
   validates :syusai, presence: true
   validates :fukusai, presence: true
+  validates :food_status, presence: true
+  validates :genre_id, presence: true
   
 end

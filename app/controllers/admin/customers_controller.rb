@@ -8,6 +8,4 @@ class Admin::CustomersController < ApplicationController
     @menus = @customer.menus.page(params[:page])
   end
 
-  def edit
-  end
 end
