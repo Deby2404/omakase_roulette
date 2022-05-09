@@ -12,6 +12,9 @@
           <td>献立名</td>
           <td><%= @menus['mon'][0].name %></td>
         </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['mon'][0]), class: "btn btn-primary" %></td>
+        </tr>
       </table>
     </td>
   </tr>
@@ -25,6 +28,9 @@
         <tr>
           <td>献立名</td>
           <td><%= @menus['tue'][0].name %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['tue'][0]), class: "btn btn-primary" %></td>
         </tr>
       </table>
     </td>
@@ -40,6 +46,9 @@
           <td>献立名</td>
           <td><%= @menus['wed'][0].name %></td>
         </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['wed'][0]), class: "btn btn-primary" %></td>
+        </tr>
       </table>
     </td>
   </tr>
@@ -53,6 +62,9 @@
         <tr>
           <td>献立名</td>
           <td><%= @menus['thu'][0].name %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['thu'][0]), class: "btn btn-primary" %></td>
         </tr>
       </table>
     </td>
@@ -68,6 +80,9 @@
           <td>献立名</td>
           <td><%= @menus['fri'][0].name %></td>
         </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['fri'][0]), class: "btn btn-primary" %></td>
+        </tr>
       </table>
     </td>
   </tr>
@@ -82,6 +97,9 @@
           <td>献立名</td>
           <td><%= @menus['sat'][0].name %></td>
         </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['sat'][0]), class: "btn btn-primary" %></td>
+        </tr>
       </table>
     </td>
   </tr>
@@ -95,6 +113,9 @@
         <tr>
           <td>献立名</td>
           <td><%= @menus['sun'][0].name %></td>
+        </tr>
+        <tr>
+          <td><%= link_to "献立を見る", public_menu_path(@menus['sun'][0]), class: "btn btn-primary" %></td>
         </tr>
       </table>
     </td>
