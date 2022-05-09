@@ -11,7 +11,7 @@ class Public::DayRandomsController < ApplicationController
     else
         @menu = Menu.all #menuの情報全部取得
         @genre = Genre.all #genreの情報全部取得
-        render new
+        render :new
     end
   end
 
