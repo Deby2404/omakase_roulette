@@ -12,9 +12,9 @@ ja:
           name: 名前
           password: パスワード
           encrypted_password: 確認用パスワード
-    enums:
-      menu:
-        food_status:
-          breakfast: "朝食"
-          lunch: "昼食"
-          dinner: "夕食"
+  enums:
+    menu:
+      food_status:
+        breakfast: "朝食"
+        lunch: "昼食"
+        dinner: "夕食"

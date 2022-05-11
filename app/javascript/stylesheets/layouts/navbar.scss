@@ -1,0 +1,55 @@
+.navbar {
+  background-color: #ffffff;
+  padding: 0px;
+  margin-top: 6px;
+}
+
+li {
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+// トップページ
+
+.background {
+  background-image: url("../../assets/images/indian.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.background-content {
+  height: 400px;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.food-btn {
+  margin-: 30px;
+}
+
+// 1日献立ページ
+
+.bg-one-new {
+  background-image: url("../../assets/images/wasyoku.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bg-one-new-content {
+  height: 500px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.random-show {
+  background-image: url("../../assets/images/beige.jpg");
+  width: 100%;
+  height: 700px;
+}
+

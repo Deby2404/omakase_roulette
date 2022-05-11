@@ -1,29 +1,55 @@
-
-<header>
-  <header class="shadow-sm">
-    <nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <%= link_to root_path do %>
-          <%= image_tag 'logo_transparent.png', :size =>'120x120' %>
-        <% end %>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-           <div class="collapse navbar-collapse show" id="navbarNavDropdown">
-    <ul>
-      <% if customer_signed_in? %>
-      <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
-      <%= link_to "マイページ", public_customers_my_page_path %>
-      <%= link_to "トップページ", root_path %>
-      <% elsif admin_signed_in? %>
-      <%= link_to "管理者ログアウト", destroy_admin_session_path, method: :delete %>
-      <%= link_to "ジャンル", new_admin_genre_path %>
-      <%= link_to "会員一覧", admin_customers_path %>
-      <%= link_to "お問い合わせ", admin_contacts_path %>
-      <% end %>
-    </ul>
-  </div>
-  </div>
+        <%= link_to "", root_path, class: "navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-md-auto align-items-center">
+            <li>
+             <%= link_to root_path do %>
+              <%= image_tag 'logo_transparent.png', :size =>'120x120' %>
+             <% end %>
+            </li>
+            <% if customer_signed_in? %>
+            <li>
+              <%= link_to destroy_customer_session_path, method: :delete, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-right-from-bracket"></i> ログアウト
+              <% end %>
+            </li>
+            <li>
+              <%= link_to public_customers_my_page_path, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-user"></i> マイページ
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-house"></i> トップページ
+              <% end %>
+            </li>
+            <% elsif admin_signed_in? %>
+            <li>
+              <%= link_to destroy_admin_session_path, method: :delete, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-right-from-bracket"></i> 管理者ログアウト
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_admin_genre_path, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-bowl-food"></i> ジャンル
+              <% end %>
+            </li>
+            <li>
+              <%= link_to admin_customers_path, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-users"></i> 会員一覧
+              <% end %>
+            </li>
+            <li>
+              <%= link_to admin_contacts_path, class: "btn btn-info rounded-pill" do  %>
+                <i class="fa-solid fa-envelope"></i> お問い合わせ
+              <% end %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
   </nav>
-</header>
