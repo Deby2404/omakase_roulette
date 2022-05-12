@@ -11,7 +11,7 @@ ja:
           email: メールアドレス
           name: 名前
           password: パスワード
-          encrypted_password: 確認用パスワード
+          password_confirmation: 確認用パスワード
   enums:
     menu:
       food_status:

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #ffffff;
   padding: 0px;
@@ -72,5 +78,20 @@ li {
   height: 700px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+// 新規登録ページ
+
+.box-1 {
+  width: 350px;
+  height: 600px;
+  margin: 60px auto 0;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+}
+
+.box-inner {
+  padding: 20px 26px;
 }
 
