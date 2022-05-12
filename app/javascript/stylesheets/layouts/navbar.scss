@@ -32,7 +32,7 @@ li {
 
 // 1日献立ページ
 
-.bg-one-new {
+.bg-one {
   background-image: url("../../assets/images/wasyoku.jpg");
   background-size:cover;
   background-position: center;
@@ -41,15 +41,35 @@ li {
   margin: 0 auto;
 }
 
-.bg-one-new-content {
+.bg-one-content {
   height: 500px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .random-show {
-  background-image: url("../../assets/images/beige.jpg");
+  background-color: #f5f5f5;
   width: 100%;
   height: 700px;
 }
 
+.menu {
+  margin-top: 40px;
+}
+
+// １週間献立ページ
+
+.bg-week {
+  background-image: url("../../assets/images/yousyoku.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bg-week-content {
+  height: 700px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
