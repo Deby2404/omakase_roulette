@@ -23,6 +23,7 @@ class Public::WeekRandomsController < ApplicationController
 
   def show
     @menus = Menu.find(params[:id])
+    @genre = @menus.genre
   end
 
   private

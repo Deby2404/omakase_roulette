@@ -1,124 +1,72 @@
-<h3>１週間分の献立表示</h3>
+<div class="random-show ">
+  <h1 class="text-center pt-4">１週間分の献立表示</h1>
+  <div class="row mt-5">
+    <table class="col-md-6 offset-md-3 text-center table">
+     <thead>
+      <tr>
+        <th>曜日</th>
+        <th>献立名</th>
+        <th>詳細</th>
+        <th>食事</th>
+        <th>ジャンル</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+        <th>月曜日</th>
+        <td><%= @menus['mon'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['mon'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['mon'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>火曜日</th>
+        <td><%= @menus['tue'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['tue'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['tue'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>水曜日</th>
+        <td><%= @menus['wed'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['wed'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['wed'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>木曜日</th>
+        <td><%= @menus['thu'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['thu'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['thu'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>金曜日</th>
+        <td><%= @menus['fri'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['fri'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['fri'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>土曜日</th>
+        <td><%= @menus['sat'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['sat'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['sat'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+      <tr>
+        <th>日曜日</th>
+        <td><%= @menus['sun'][0].name %></td>
+        <td><%= link_to "献立を見る", public_menu_path(@menus['sun'][0]), class: "btn btn-primary" %></td>
+        <td><%= @menus['sun'][0].food_status_i18n %></td>
+        <td><%= @menus['mon'][0].genre.name %></td>
+      </tr>
+     </tbody>
+    </table>
+  </div>
+  <div class="text-right pr-5">
+    <%= link_to "再度おまかせ", new_public_week_random_path, class: "btn btn-lg btn-warning rounded-pill"  %>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <td>月曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['mon'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['mon'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['mon'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>火曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['tue'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['tue'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['tue'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>水曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['wed'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['wed'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['wed'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>木曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['thu'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['thu'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['thu'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>金曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['fri'][0].food_status_i18n %>></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['fri'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['fri'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>土曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['sat'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['sat'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['sat'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td>日曜日</td>
-    <td>
-      <table>
-        <tr>
-          <td><%= @menus['sun'][0].food_status_i18n %></td>
-        </tr>
-        <tr>
-          <td>献立名</td>
-          <td><%= @menus['sun'][0].name %></td>
-        </tr>
-        <tr>
-          <td><%= link_to "献立を見る", public_menu_path(@menus['sun'][0]), class: "btn btn-primary" %></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<%= link_to "再度おまかせ", new_public_week_random_path, class: "btn btn-primary"  %>
+

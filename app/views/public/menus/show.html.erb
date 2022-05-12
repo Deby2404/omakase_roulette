@@ -1,47 +1,42 @@
-<h2 class="text-center">投稿詳細</h2>
-<div class="container">
- <div class="row justify-content-center">
-    <div class="col-5">
-     <% if @menu.image.attached? %>
-      <%= image_tag @menu.image, size: "200x200" %>
+<div class="random-show">
+ <h1 class="text-center pt-4">今日の献立表示</h1>
+ <div class="d-flex justify-content-center">
+  <div class="row mr-5 mt-5">
+   　<% if @menu.image.attached? %>
+      <%= image_tag @menu.image, size: "500x400" %>
      <% else %>
-      <%= image_tag 'no_img', size: "200x200" %>
+      <%= image_tag 'no_img', size: "500x400" %>
      <% end %>
-    </div>
-    <div class="col-5">
-     <table class="table table-borderless">
-        <tr>
-         <td>食事</td>
-         <td><%= @menu.food_status_i18n %></td>
-        </tr>
-        <tr>
-         <td>ジャンル</td>
-         <td><%= @menu.genre.name %></td>
-        </tr>
-        <tr>
-         <td>献立名</td>
-         <td><%= @menu.name %></td>
-        </tr>
-        <tr>
-         <td>主食</td>
-         <td><%= @menu.syusyoku %></td>
-        </tr>
-        <tr>
-         <td>主菜</td>
-         <td><%= @menu.syusai %></td>
-        </tr>
-        <tr>
-         <td>副菜</td>
-         <td><%= @menu.fukusai %></td>
-        </tr>
-        <tr>
-         <td>作り方</td>
-         <td><%= @menu.introduction %></td>
-        </tr>
-     </table>
-     <div class="text-center">
-        <%= link_to "編集", edit_public_menu_path(@menu.id), class: "btn btn-warning" %>
+  </div>
+
+    <div class="row align-items-center">
+     <div class="col-6">
+      <div class="menu h5 font-weight-bold">食事</div>
+      <div class="menu h5 font-weight-bold">ジャンル</div>
+      <div class="menu h5 font-weight-bold">献立名</div>
+      <div class="menu h5 font-weight-bold">主食</div>
+      <div class="menu h5 font-weight-bold">主菜</div>
+      <div class="menu h5 font-weight-bold">副菜</div>
+      <div class="menu h5 font-weight-bold">作り方</div>
+     </div>
+     <div class="col-6 mt-3">
+      <div class="menu"><%= @menu.food_status_i18n %></div>
+      <div class="menu"><%= @menu.genre.name %></div>
+      <div class="menu"><%= @menu.name %></div>
+      <div class="menu"><%= @menu.syusyoku %></div>
+      <div class="menu"><%= @menu.syusai %></div>
+      <div class="menu"><%= @menu.fukusai %></div>
+      <div class="menu"><%= @menu.introduction %></div>
      </div>
     </div>
  </div>
+  <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
+   <div class="text-center">
+     <%= link_to "編集", edit_public_menu_path(@menu.id), class: "btn btn-warning" %>
+   </div>
+  <% else %>
+   <div class="text-center">
+    <%= link_to "戻る", public_week_random_path, class: "btn btn-warning" %>
+   </div>
+  <% end %>
 </div>
