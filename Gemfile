@@ -61,4 +61,3 @@ gem 'bootstrap4-kaminari-views'
 gem 'rails-i18n', '~> 6.0'
 gem 'pry-byebug'
 gem 'devise-i18n'
-gem "jquery-rails"

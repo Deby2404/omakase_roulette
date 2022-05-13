@@ -1,17 +1,20 @@
 ja:
   activerecord:
     models:
-      # view側： User.model_name.human => "ユーザ" / t("activerecord.models.user")と同じ
       customer: ユーザー
-    # model毎に定義したいattributesを記述
     attributes:
         customer:
           id: ID
-          # view側： User.human_attribute_name :name => "名前" /　t("activerecord.attributes.user.name")と同じ
           email: メールアドレス
           name: 名前
           password: パスワード
           password_confirmation: 確認用パスワード
+    admin: ユーザー
+    attributes:
+        admin:
+          id: ID
+          email: メールアドレス
+          password: パスワード
   enums:
     menu:
       food_status:
