@@ -2,9 +2,14 @@
    <div class="background">
     <div class="background-content">
       <% if customer_signed_in? %>
-        <div class="food-btn">
-          <div><%= link_to "1日分の献立", new_public_day_random_path, class: "btn btn-warning" %></div>
-          <div><%= link_to "1週間分の献立", new_public_week_random_path, class: "btn btn-warning" %></div>
+        <h5 class="text-white pt-5">
+          毎日献立を考えるのがめんどすさい！何を作ればいいかわからない！</br>
+          そんな時こそ「おまかせルーレット」をご使用ください！</br>
+          「おまかせルーレット」はランダムな献立を提示します
+        </h5>
+        <div class="food-btn d-flex justify-content-center">
+          <div class="mt-5 mr-5"><%= link_to "1日分の献立", new_public_day_random_path, class: "btn btn-lg btn-warning rounded-pill" %></div>
+          <div class="mt-5"><%= link_to "1週間分の献立", new_public_week_random_path, class: "btn btn-lg btn-warning rounded-pill" %></div>
         </div>
        <% elsif %>
         <h5 class="text-white pt-3">
