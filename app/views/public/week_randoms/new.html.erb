@@ -3,11 +3,13 @@
     <div class="bg-week-content text-center">
       <div class="text-white">
         <h1 class="pt-5 mb-4">1週間分の献立</h1>
-         <h4>
-          STEP1. 朝食・昼食・夕食からお選びください</br>
-          STEP2. 和食・洋食・中華・その他からお選びください</br>
-          STEP3. 「おまかせ」ボタンを押して下さい
-        </h4>
+         <div class="d-flex justify-content-center">
+          <h4 class="text-left">
+            STEP1. 朝食・昼食・夕食からお選びください</br>
+            STEP2. 和食・洋食・中華・その他からお選びください</br>
+            STEP3. 「おまかせ」ボタンを押して下さい
+          </h4>
+        </div>
         <%= form_with model: @menu, url: public_week_randoms_path, method: :post, local: true do |f| %>
           <div class="mx-auto col-lg-5">
             <table>
