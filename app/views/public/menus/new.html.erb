@@ -1,12 +1,19 @@
 <div class="container">
-  <h2>献立投稿</h2>
+  <h1 class="text-center">献立投稿</h1>
   <%= form_with model: @menu, url: public_menus_path, method: :post, local: true do |f| %>
   <div class="row">
-    <div class="col-5 mx-auto">
-      <table class="table">
+    <div class="mx-auto">
+      <table class="table table-borderless">
         <tr>
-          <td><%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control" %></td>
-          <td><%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %></td>
+          <td></td>
+          <td>
+            <table>
+              <tr>
+                <th><%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control" %></th>
+                <td><%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %></td>
+              </tr>
+            </table>
+          </td>
         </tr>
         <tr>
           <td>献立画像</td>
@@ -33,7 +40,7 @@
           <td><%= f.text_area :introduction, placeholder: "説明文", class: "form-control" %></td>
         </tr>
       </table>
-      <div>
+      <div class="text-center">
         <%= f.submit"新規投稿", class: "btn btn-success" %>
       </div>
     </div>

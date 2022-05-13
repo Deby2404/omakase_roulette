@@ -1,8 +1,7 @@
 <div class="random-show">
- <h1 class="text-center pt-4">今日の献立表示</h1>
  <div class="d-flex justify-content-center">
   <div class="row mr-5 mt-5">
-   　<% if @menu.image.attached? %>
+     <% if @menu.image.attached? %>
       <%= image_tag @menu.image, size: "500x400" %>
      <% else %>
       <%= image_tag 'no_img', size: "500x400" %>
@@ -32,7 +31,9 @@
  </div>
   <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
    <div class="text-center">
-     <%= link_to "編集", edit_public_menu_path(@menu.id), class: "btn btn-warning" %>
+     <%= link_to edit_public_menu_path(@menu.id), class: "btn btn-lg btn-warning" do %>
+       <i class="fa-solid fa-pen-to-square"></i> 編集
+     <% end %>
    </div>
   <% else %>
    <div class="text-center">
