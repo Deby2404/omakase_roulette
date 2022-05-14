@@ -1,34 +1,47 @@
 <div class="random-show">
- <div class="d-flex justify-content-center">
-  <div class="row mr-5 mt-5">
+ <div class="d-flex justify-content-center row">
+  <div class="col-xs-12 mr-5 mt-3">
      <% if @menu.image.attached? %>
       <%= image_tag @menu.image, size: "500x400" %>
      <% else %>
       <%= image_tag 'no_img', size: "500x400" %>
      <% end %>
   </div>
-
-    <div class="row align-items-center">
-     <div class="col-6">
-      <div class="menu h5 font-weight-bold">食事</div>
-      <div class="menu h5 font-weight-bold">ジャンル</div>
-      <div class="menu h5 font-weight-bold">献立名</div>
-      <div class="menu h5 font-weight-bold">主食</div>
-      <div class="menu h5 font-weight-bold">主菜</div>
-      <div class="menu h5 font-weight-bold">副菜</div>
-      <div class="menu h5 font-weight-bold">作り方</div>
-     </div>
-     <div class="col-6 mt-3">
-      <div class="menu"><%= @menu.food_status_i18n %></div>
-      <div class="menu"><%= @menu.genre.name %></div>
-      <div class="menu"><%= @menu.name %></div>
-      <div class="menu"><%= @menu.syusyoku %></div>
-      <div class="menu"><%= @menu.syusai %></div>
-      <div class="menu"><%= @menu.fukusai %></div>
-      <div class="menu"><%= @menu.introduction %></div>
-     </div>
-    </div>
+  <div class="col-xs-12 ">
+   <table class="table table-borderless mt-5">
+    <tr>
+       <th class="pr-5">食事</th>
+       <td><%= @menu.food_status_i18n %></td>
+     </tr>
+    <tr>
+       <th class="pr-5">ジャンル</th>
+       <td><%= @menu.genre.name %></td>
+     </tr>
+     <tr>
+       <th class="pr-5">献立名</th>
+       <td><%= @menu.name %></td>
+     </tr>
+     <tr>
+       <th>主食</th>
+       <td><%= @menu.syusyoku %></td>
+     </tr>
+     <tr>
+       <th>主菜</th>
+       <td><%= @menu.syusai %></td>
+     </tr>
+     <tr>
+       <th>副菜</th>
+       <td><%= @menu.fukusai %></td>
+     </tr>
+     <tr>
+       <th>作り方</th>
+       <td><%= @menu.introduction %></td>
+     </tr>
+    </table>
+  </div>
+    
  </div>
+ <div class="text-center pt-5">
   <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
    <div class="text-center">
      <%= link_to edit_public_menu_path(@menu.id), class: "btn btn-lg btn-warning" do %>
@@ -40,4 +53,5 @@
     <%= link_to "戻る", public_week_random_path, class: "btn btn-warning" %>
    </div>
   <% end %>
+ </div>
 </div>

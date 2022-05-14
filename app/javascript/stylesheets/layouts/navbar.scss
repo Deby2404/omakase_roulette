@@ -116,3 +116,26 @@ li {
   border-radius: 15px;
 }
 
+
+
+// レスポンシブ対応
+
+@media screen and (max-width:768px) {
+ .background {
+   height: 550px;
+ }
+ 
+ .background-content {
+  height: 550px;
+  width: 100%;
+ }
+ 
+ .bg-week {
+  height: 800px;
+ }
+ 
+ .bg-week-content {
+  height: 800px;
+ }
+
+}
