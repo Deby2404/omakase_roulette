@@ -1,0 +1,57 @@
+<div class="random-show">
+ <div class="d-flex justify-content-center row">
+  <div class="col-xs-12 mr-5 mt-3">
+     <% if @menu.image.attached? %>
+      <%= image_tag @menu.image, size: "500x400" %>
+     <% else %>
+      <%= image_tag 'no_img', size: "500x400" %>
+     <% end %>
+  </div>
+  <div class="col-xs-12 ">
+   <table class="table table-borderless mt-5">
+    <tr>
+       <th class="pr-5">食事</th>
+       <td><%= @menu.food_status_i18n %></td>
+     </tr>
+    <tr>
+       <th class="pr-5">ジャンル</th>
+       <td><%= @menu.genre.name %></td>
+     </tr>
+     <tr>
+       <th class="pr-5">献立名</th>
+       <td><%= @menu.name %></td>
+     </tr>
+     <tr>
+       <th>主食</th>
+       <td><%= @menu.syusyoku %></td>
+     </tr>
+     <tr>
+       <th>主菜</th>
+       <td><%= @menu.syusai %></td>
+     </tr>
+     <tr>
+       <th>副菜</th>
+       <td><%= @menu.fukusai %></td>
+     </tr>
+     <tr>
+       <th>作り方</th>
+       <td><%= @menu.introduction %></td>
+     </tr>
+    </table>
+  </div>
+    
+ </div>
+ <div class="text-center pt-5">
+  <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
+   <div class="text-center">
+     <%= link_to edit_public_menu_path(@menu.id), class: "btn btn-lg btn-warning" do %>
+       <i class="fa-solid fa-pen-to-square"></i> 編集
+     <% end %>
+   </div>
+  <% else %>
+   <div class="text-center">
+    <%= link_to "戻る", public_week_random_path, class: "btn btn-warning" %>
+   </div>
+  <% end %>
+ </div>
+</div>

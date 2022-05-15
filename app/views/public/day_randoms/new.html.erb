@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="bg-one">
+    <div class="bg-one-content text-center">
+      <div class="text-white">
+        <h1 class="pt-5 mb-4">1日分の献立</h1>
+        <div class="d-flex justify-content-center">
+          <h4 class="text-left">
+            STEP1. 朝食・昼食・夕食からお選びください</br>
+            STEP2. 和食・洋食・中華・その他からお選びください</br>
+            STEP3. 「おまかせ」ボタンを押して下さい
+          </h4>
+        </div>
+      </div>
+      <%= form_with model: @menu, url: public_day_randoms_path, method: :post, local: true do |f| %>
+        <div class="d-flex justify-content-center">
+          <div class="pt-5 mr-5"><%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control" %></div>
+          <div class="pt-5"><%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %></div>
+        </div>
+        <div class="text-center pt-5"><%= f.submit "おまかせ", class: "btn btn-primary" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

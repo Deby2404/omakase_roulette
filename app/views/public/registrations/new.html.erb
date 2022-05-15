@@ -1,0 +1,35 @@
+
+
+<div class="container">
+  <h2 class="text-center mb-5">新規登録</h2>
+  <div class="offset-md-4">
+    <%= form_with model: @customer, url: customer_registration_path, id: 'new_customer', class: 'new_customer' do |f| %>
+    <%= render "public/shared/error_messages", resource: resource %>
+    <div class="field row mb-2">
+      <div class="col-lg-4"><%= f.label :name%></div>
+      <div class="col-6"><%= f.text_field :name %></div>
+    </div>
+    <div class="field row mb-2">
+      <div class="col-lg-4"><%= f.label :email%></div>
+      <div class="col-6"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
+    </div>
+    <div class="field row mb-2">
+      <div class="col-lg-4">
+        <%= f.label :password %></br>
+        <% if @minimum_password_length %>
+        <% end %>
+      </div>
+      <div class="col-6"><%= f.password_field :password, autocomplete: "new-password" %></div>
+    </div>
+    <div class="field row">
+      <div class="col-lg-4"><%= f.label :password_confirmation%></div>
+      <div class="col-6"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></div>
+    </div>
+    <div class="action row">
+      <div class="col-2"></div>
+      <div class="col-6 mt-5"><%= f.submit "新規登録", class: "btn btn-success" %></div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="text-center"><%= render "public/shared/links" %></div>

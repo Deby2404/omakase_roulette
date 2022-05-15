@@ -1,0 +1,80 @@
+<div class="container mx-auto">
+  <div class="bg-week">
+    <div class="bg-week-content text-center">
+      <div class="text-white">
+        <h1 class="pt-5 mb-4">1週間分の献立</h1>
+         <div class="d-flex justify-content-center">
+          <h4 class="text-left">
+            STEP1. 朝食・昼食・夕食からお選びください</br>
+            STEP2. 和食・洋食・中華・その他からお選びください</br>
+            STEP3. 「おまかせ」ボタンを押して下さい
+          </h4>
+        </div>
+        <%= form_with model: @menu, url: public_week_randoms_path, method: :post, local: true do |f| %>
+          <div class="mx-auto col-lg-5">
+            <table class="">
+                <tr>
+                  <td class="h4 font-weight-bold">月曜日</td>
+                  <!--f.selectだと配列で取得できないからselect_tagに書き換えた-->
+                  <!--key = mon tue wedとかのこと-->
+                  <td class="d-flex justify-content-center pl-5 py-3 ">
+                    <div class="mr-5"><%= select_tag 'menus[mon][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[mon][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">火曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                    <div class="mr-5"><%= select_tag 'menus[tue][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[tue][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">水曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                    <div class="mr-5"><%= select_tag 'menus[wed][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[wed][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">木曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                   <div class="mr-5"><%= select_tag 'menus[thu][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[thu][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">金曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                    <div class="mr-5"><%= select_tag 'menus[fri][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[fri][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">土曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                    <div class="mr-5"><%= select_tag 'menus[sat][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[sat][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="h4 font-weight-bold">日曜日</td>
+                  <td class="d-flex justify-content-center pl-5 pb-3">
+                    <div class="mr-5"><%= select_tag 'menus[sun][food_status]', options_for_select(Menu.food_statuses.keys.map{|k| [I18n.t("enums.menu.food_status.#{k}"),k]}), class: "form-control col-12" %></div>
+                    <div><%= select_tag 'menus[sun][genre_id]',options_for_select(@genre.map{|genre|[genre.name,genre.id]}),include_blank: "--選択してください--" %></div>
+                  </td>
+                </tr>
+            </table>
+            <div class="mt-3"><%= f.submit "おまかせ", class: "btn btn-primary" %></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

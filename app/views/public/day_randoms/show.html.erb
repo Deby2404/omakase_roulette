@@ -1,0 +1,35 @@
+<div class="random-show">
+ <h1 class="text-center pt-4">1日分の献立</h1>
+ <div class="d-flex justify-content-center row">
+  <div class="col-xs-12 mr-5 mt-3"><%= image_tag @menus.image, size: "500x400" %></div>
+  <div class="col-xs-12 ">
+   <table class="table table-borderless mt-5">
+     <tr>
+       <th class="pr-5">献立名</th>
+       <td><%= @menus.name %></td>
+     </tr>
+     <tr>
+       <th>主食</th>
+       <td><%= @menus.syusyoku %></td>
+     </tr>
+     <tr>
+       <th>主菜</th>
+       <td><%= @menus.syusai %></td>
+     </tr>
+     <tr>
+       <th>副菜</th>
+       <td><%= @menus.fukusai %></td>
+     </tr>
+     <tr>
+       <th>作り方</th>
+       <td><%= @menus.introduction %></td>
+     </tr>
+    </table>
+  </div>
+    
+ </div>
+ <div class="text-center pt-5">
+  <%= link_to "再度おまかせ", new_public_day_random_path, class: "btn btn-primary"  %>
+ </div>
+</div>
+
