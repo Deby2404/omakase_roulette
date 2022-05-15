@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -59,9 +60,7 @@ gem 'enum_help'
 gem 'kaminari','~> 1.2.1'
 gem 'bootstrap4-kaminari-views'
 gem 'rails-i18n', '~> 6.0'
-gem 'pry-byebug'
 gem 'devise-i18n'
-
 gem 'dotenv-rails'
 group :production do
   gem 'mysql2'

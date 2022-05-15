@@ -1,11 +1,13 @@
 <div class="random-show">
  <h1 class="text-center pt-4">1日分の献立</h1>
- <div class="d-flex justify-content-center row">
-  <div class="col-xs-12 mr-5 mt-3"><%= image_tag @menus.image, size: "500x400" %></div>
-  <div class="col-xs-12 ">
-   <table class="table table-borderless mt-5">
+ 
+ <div class="d-flex justify-content-center">
+  <div><%= image_tag @menus.image, size: "500x400" %></div>
+
+  <div class>
+   <table class="table table-borderless">
      <tr>
-       <th class="pr-5">献立名</th>
+       <th class="table-menu">献立名</th>
        <td><%= @menus.name %></td>
      </tr>
      <tr>
@@ -22,11 +24,11 @@
      </tr>
      <tr>
        <th>作り方</th>
-       <td><%= @menus.introduction %></td>
+       <td class="border text-justify"><%= @menus.introduction %></td>
      </tr>
     </table>
   </div>
-    
+
  </div>
  <div class="text-center pt-5">
   <%= link_to "再度おまかせ", new_public_day_random_path, class: "btn btn-primary"  %>

@@ -9,6 +9,9 @@ ja:
           name: 名前
           password: パスワード
           password_confirmation: パスワード（確認用）
+        admin:
+          email: メールアドレス
+          password: パスワード
 
   enums:
     menu:

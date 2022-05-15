@@ -84,6 +84,8 @@ li {
   height: 700px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  
+
 }
 
 
@@ -117,6 +119,16 @@ li {
 }
 
 
+// フラッシュメッセージ
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
 
 // レスポンシブ対応
 
@@ -124,16 +136,16 @@ li {
  .background {
    height: 550px;
  }
- 
+
  .background-content {
   height: 550px;
   width: 100%;
  }
- 
+
  .bg-week {
   height: 800px;
  }
- 
+
  .bg-week-content {
   height: 800px;
  }
