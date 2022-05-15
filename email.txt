@@ -1,3 +1,0 @@
-gmail:
-  address: dedede2404@gmail.com
-  password: DeboGui0871
