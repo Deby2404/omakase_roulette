@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   root to: 'homes#top'
 
   devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
-  sessions: "admin/sessions"
+    sessions: "admin/sessions"
   }
+
   devise_for :customers, skip: [:passwords], controllers: {
     registrations:"public/registrations",
     passwords:'public/settings/passwords',
@@ -33,6 +34,6 @@ Rails.application.routes.draw do
     patch '/customers/:id/withdrawal' => 'customers#withdrawal', as: 'withdrawal' #論理削除用ルーティング
   end
 
-
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

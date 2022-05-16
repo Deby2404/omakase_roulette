@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Public::SessionsController < Devise::SessionsController
-  
+
   def after_sign_in_path_for(resource)
     public_customers_my_page_path
   end
@@ -10,7 +10,7 @@ class Public::SessionsController < Devise::SessionsController
   def after_sign_out_path_for(resource)
     root_path
   end
-  
+
   # 会員の論理削除のための記述。退会後は、同じアカウントでは利用できない。
   def reject_customer
     @customer = Customer.find_by(name: params[:customer][:name]) #ログイン時に入力された名前に対応するユーザーが存在するか探している
@@ -20,6 +20,12 @@ class Public::SessionsController < Devise::SessionsController
       else
         flash[:notice] = '項目を入力してください'
       end
-    end  
-  end  
+    end
+  end
+
+  def guest_sign_in
+    customer = Customer.guest
+    sign_in customer
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
 end
