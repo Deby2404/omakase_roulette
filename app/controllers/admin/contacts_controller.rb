@@ -1,7 +1,10 @@
 class Admin::ContactsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
-    @contacts = Contact.page(params[:page]).order(created_at: :desc).per(16)
     @customers = Customer.all
+    @contacts = Contact.page(params[:page]).order(created_at: :desc).per(10)
+    Notification.confirmed
   end
 
   def edit

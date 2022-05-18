@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_16_061307) do
+ActiveRecord::Schema.define(version: 2022_05_16_101207) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -93,6 +93,13 @@ ActiveRecord::Schema.define(version: 2022_05_16_061307) do
     t.integer "food_status", default: 0, null: false
     t.integer "genre_id", null: false
     t.integer "customer_id", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "contact_id"
+    t.boolean "checked", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -1,14 +1,29 @@
-<h2>お問い合わせ内容</h2>
+<h2 class="text-center">お問い合わせ内容</h2>
     <%= form_with model: @contact, url: admin_contact_path do |f| %>
-        <h3>顧客名</h3>
-        <%= @contact.customer.name %>さん
-        <h3>問い合わせ日</h3>
-        <%= @contact.created_at.strftime("%Y年%m月%d日 ") %>
-        <h3>タイトル</h3>
-        <%= @contact.title %>
-        <h3>問い合わせ内容</h3>
-        <%= @contact.body %>
-        <h3>返信</h3>
-        <%= f.text_area :reply, class:"form-control", placeholder: "返信内容" %>
-        <%= f.submit "送信" %>
+    <div class="container">
+        <div class="row justify-content-center pt-5">
+            <div class="pr-5">
+              <div class="">顧客名: <%= @contact.customer.name %>さん</div>
+            </div>
+            <div class="">
+              <div>問い合わせ日: <%= @contact.created_at.strftime("%Y年%m月%d日 ") %></div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="text-left">
+        <div class="pt-5">
+            <div class="font-weight-bold">タイトル</div>
+            <div><%= @contact.title %></div>
+        </div>
+        <div class="pt-4">
+            <div class="font-weight-bold">問い合わせ内容</div>
+            <div><%= @contact.body %></div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center pt-5">
+        <div class="col-6"><%= f.text_area :reply, class:"form-control", placeholder: "返信内容" %></div>
+    </div>
+    <div class="text-center pt-3"><%= f.submit "送信", class: "btn btn-primary" %></div>
     <% end %>
