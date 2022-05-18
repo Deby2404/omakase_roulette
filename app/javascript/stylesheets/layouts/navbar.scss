@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+main {
+  color: #666666;
+}
+
+// ヘッダー
 .navbar {
   background-color: #ffffff;
   padding: 0px;
@@ -14,6 +19,22 @@ li {
   margin-right: 5px;
   margin-bottom: 2px;
 }
+
+.notification-icon {
+  position: absolute;
+  padding-left: 6.5rem;
+  padding-bottom: 2rem;
+  color: #efa04c;
+}
+
+
+
+// テーブル
+.th {
+  background-color: #339999;
+  color: white;
+}
+
 
 // トップページ
 
@@ -36,11 +57,6 @@ li {
   margin-: 30px;
 }
 
-// マイページ
-.mypage {
-  background-color: #f5f5f5;
-  width: 100%;
-}
 
 // 1日献立ページ
 
@@ -84,8 +100,6 @@ li {
   height: 700px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
-
 }
 
 
@@ -128,14 +142,6 @@ li {
 .alert {
   color: red;
 }
-
-.n-circle {
-  position: absolute;
-  padding-left: 1rem;
-  padding-top: 0rem;
-  color: #efa04c;
-}
-
 
 // レスポンシブ対応
 

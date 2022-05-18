@@ -6,6 +6,7 @@ class  Public::ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.customer_id = current_customer.id
+    @contact.notifications.build #buildはContact.newと一緒
     if @contact.save
       redirect_to root_path
     else

@@ -1,16 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <%= link_to "", root_path, class: "navbar-brand" %>
+        <div class="navbar-brand">
+          <%= link_to root_path do %>
+          　<%= image_tag 'logo_transparent.png', :size =>'120x120' %>
+          <% end %>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-md-auto align-items-center">
-            <li>
-             <%= link_to root_path do %>
-              <%= image_tag 'logo_transparent.png', :size =>'120x120' %>
-             <% end %>
-            </li>
             <% if customer_signed_in? %>
             <li>
               <%= link_to destroy_customer_session_path, method: :delete, class: "btn btn-info rounded-pill" do %>
@@ -25,6 +24,11 @@
             <li>
               <%= link_to root_path, class: "btn btn-info rounded-pill" do %>
                 <i class="fa-solid fa-house"></i> トップページ
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_public_menu_path, class: "btn btn-info rounded-pill" do %>
+                <i class="fa-solid fa-file-pen"></i> 新規投稿
               <% end %>
             </li>
             <% elsif admin_signed_in? %>
@@ -46,7 +50,7 @@
             <li>
               <%= link_to admin_contacts_path, class: "btn btn-info rounded-pill" do %>
                 <% if @unchecked_notifications.any? %>
-                  <i class="fa-solid fa-circle" style="color: gold;"></i>お問い合わせ
+                  <i class="fa-solid fa-bell notification-icon fa-lg"></i>お問い合わせ
                 <% else %>
                 お問い合わせ
                 <% end %>
@@ -57,3 +61,4 @@
         </div>
       </div>
   </nav>
+
