@@ -27,6 +27,50 @@ li {
   color: #efa04c;
 }
 
+// ヘッダーボタン
+/* LINE001 */
+.header-btn {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 10px 25px;
+    color: #008b8b;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    text-decoration: underline white;
+}
+.header-btn:before {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,.1);
+    transform: translateX(-50%);
+}
+.header-btn:after {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #008080;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+.header-btn:hover {
+    opacity: 0.7;
+    text-decoration: underline white;
+}
+.header-btn:hover:after {
+    transform: scale(1, 1);
+}
 
 
 // テーブル
@@ -142,6 +186,7 @@ li {
 .alert {
   color: red;
 }
+
 
 // レスポンシブ対応
 
