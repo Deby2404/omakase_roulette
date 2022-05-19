@@ -28,7 +28,6 @@ li {
 }
 
 // ヘッダーボタン
-/* LINE001 */
 .header-btn {
     position: relative;
     display: flex;
@@ -98,7 +97,28 @@ li {
 }
 
 .food-btn {
-  margin-: 30px;
+  background: #ff8c00;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  box-shadow: 5px 5px 0 #ffd700;
+  border-radius: 50px;
+  text-decoration: underline #ff8c00;
+}
+
+.food-btn:hover {
+  background-color: #ffa500;
+  box-shadow: 0 0 0;
+  transform: translate(5px, 5px);
+  text-decoration: underline #ffa500;
 }
 
 
