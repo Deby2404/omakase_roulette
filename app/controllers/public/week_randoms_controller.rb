@@ -10,8 +10,6 @@ class Public::WeekRandomsController < ApplicationController
       @menus[key] = Menu.order("RANDOM()").where(genre_id: values[:genre_id]).where(food_status: values[:food_status]).limit(1)
     }
     render :show
-    return
-
     if @menus.present?
       redirect_to public_week_random_path(@menus.ids) #詳細ページに遷移
     else
