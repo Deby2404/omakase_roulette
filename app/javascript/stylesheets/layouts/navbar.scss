@@ -112,16 +112,16 @@ li {
 // トップページ
 
 .background {
-  background-image: url("../../assets/images/indian.jpg");
+  background-image: url("../../assets/images/cooking2.jpg");
   background-size:cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   width: 100%;
   margin: 0 auto;
 }
 
 .background-content {
-  height: 400px;
+  height: 500px;
   width: 70%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -139,7 +139,7 @@ li {
   color: #ffffff;
   transition: 0.3s ease-in-out;
   font-weight: 600;
-  box-shadow: 5px 5px 0 #ffd700;
+  box-shadow: 5px 5px 0 #d2691e;
   border-radius: 50px;
   text-decoration: underline #ff8c00;
 }
@@ -151,11 +151,29 @@ li {
   text-decoration: underline #ffa500;
 }
 
+.sign_up-btn {
+  color: #ffffff;
+  background-color: #cd5c5c;
+}
+
+.sign_up-btn:hover {
+  color: #ffffff;
+}
+
+
+.sign_in-btn {
+  color: #ffffff;
+  background-color: #bc8f8f;
+}
+
+.sign_in-btn:hover {
+  color: #ffffff;
+}
 
 // 1日献立ページ
 
 .bg-one {
-  background-image: url("../../assets/images/wasyoku.jpg");
+  background-image: url("../../assets/images/food2.jpg");
   background-size:cover;
   background-position: center;
   height: 500px;
@@ -182,7 +200,7 @@ li {
 // １週間献立ページ
 
 .bg-week {
-  background-image: url("../../assets/images/yousyoku.jpg");
+  background-image: url("../../assets/images/food3.jpg");
   background-size:cover;
   background-position: center;
   height: 700px;

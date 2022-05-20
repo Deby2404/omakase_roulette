@@ -20,14 +20,26 @@
           </div>
         </div>
        <% elsif %>
-        <h5 class="text-white pt-3">
+        <h5 class="text-white pt-5">
          登録していただいた方は献立の投稿が可能です</br>
          投稿される方のみ新規登録をお願い致します
         </h5>
         <div class="user-btn d-flex justify-content-center">
-         <div class="mt-4 mr-5 mb-5"><%= link_to "新規登録", new_customer_registration_path, class: "btn btn-success" %></div>
-         <div class="mt-4 mr-5 mb-5"><%= link_to "ログイン", new_customer_session_path, class: "btn btn-secondary" %></div>
-         <div class="mt-4 mr-5 mb-5"><%= link_to 'ゲストログイン（閲覧用）', public_guest_sign_in_path, method: :post, class: "btn btn-secondary" %></div>
+          <div class="mt-4 mr-5 mb-5">
+            <%= link_to new_customer_registration_path do %>
+              <div class="btn sign_up-btn">新規登録</div>
+            <% end %>
+          </div>
+          <div class="mt-4 mr-5 mb-5">
+            <%= link_to new_customer_session_path do %>
+              <div class="btn sign_in-btn">ログイン</div>
+            <% end %>
+          </div>
+          <div class="mt-4 mr-5 mb-5">
+            <%= link_to public_guest_sign_in_path, method: :post do %>
+              <div class="btn sign_in-btn">ゲストログイン（閲覧用）</div>
+            <% end %>
+          </div>
         </div>
         <h5 class="text-white">
          毎日献立を考えるのがめんどくさい！何を作ればいいかわからない！</br>
