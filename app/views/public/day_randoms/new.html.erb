@@ -22,7 +22,7 @@
           <div class="pt-5 mr-5"><%= f.select :food_status, Menu.food_statuses_i18n.invert, {}, class: "form-control" %></div>
           <div class="pt-5"><%= f.select :genre_id,@genre.map{|genre|[genre.name,genre.id]},include_blank: "--選択してください--" %></div>
         </div>
-        <div class="text-center pt-5"><%= f.submit "おまかせ", class: "btn btn-primary" %></div>
+        <div class="text-center pt-5"><%= f.submit "おまかせ", class: "btn btn-info" %></div>
       <% end %>
     </div>
   </div>
