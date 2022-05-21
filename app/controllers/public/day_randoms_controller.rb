@@ -5,7 +5,9 @@ class Public::DayRandomsController < ApplicationController
   end
 
   def create
-    @menus = Menu.order("RANDOM()").where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
+
+    rand = (ENV['RAILS_ENV'] == "production") ? "RAND()" : "RANDOM()"
+    @menus = Menu.order(rand).where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
     if @menus.present?
       redirect_to public_day_random_path(@menus.ids) #詳細ページに遷移
     else
