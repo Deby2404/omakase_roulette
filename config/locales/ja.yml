@@ -12,6 +12,9 @@ ja:
         admin:
           email: メールアドレス
           password: パスワード
+        menu:
+          food_status: 食事
+          genre_id: ジャンル
 
   enums:
     menu:

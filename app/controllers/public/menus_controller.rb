@@ -7,8 +7,12 @@ class Public::MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     @menu.customer_id = current_customer.id
-    @menu.save
-    redirect_to public_menu_path(@menu.id)
+    if @menu.save
+     redirect_to public_menu_path(@menu.id)
+    else
+      @genres = Genre.all
+      render :new
+    end
   end
 
   def index

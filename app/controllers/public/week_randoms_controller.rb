@@ -5,16 +5,24 @@ class Public::WeekRandomsController < ApplicationController
   end
 
   def create
-    rand = (ENV['RAILS_ENV'] == "production") ? "RAND()" : "RANDOM()"
+    rand = (ENV['RAILS_ENV'] == "production") ? "RAND()" : "RANDOM()" #MySQLとSQLlightでは書き方が違ってくる
     @menu ={}
-    params[:menus].each{ |key, values|
+    params[:menus].each do |key, values|
       @menu[key] = Menu.order(rand).where(genre_id: values[:genre_id]).where(food_status: values[:food_status]).limit(1)
-    }
-    if @menu.present?
-      #redirect_to public_week_random_path(@menu.id) #詳細ページに遷移
+    end
+
+    check_flg = true
+    w_names = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+    w_names.each do |w_name|
+      if @menu[w_name].blank? #@menuのnameがblenkだったらfalseを返す
+        check_flg = false
+      end
+    end
+
+    if check_flg
       render :show
     else
-      @menus = Menu.all #menuの情報全部取得
+      # @menus = Menu.all
       @genres = Genre.all #genreの情報全部取得
       render :new
     end
