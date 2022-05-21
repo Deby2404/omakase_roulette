@@ -5,16 +5,18 @@ class Public::WeekRandomsController < ApplicationController
   end
 
   def create
+    rand = (ENV['RAILS_ENV'] == "production") ? "RAND()" : "RANDOM()"
     @menu ={}
     params[:menus].each{ |key, values|
-      @menu[key] = Menu.order("RANDOM()").where(genre_id: values[:genre_id]).where(food_status: values[:food_status]).limit(1)
+      @menu[key] = Menu.order(rand).where(genre_id: values[:genre_id]).where(food_status: values[:food_status]).limit(1)
     }
     if @menu.present?
-      redirect_to public_week_random_path(@menu.id) #詳細ページに遷移
+      #redirect_to public_week_random_path(@menu.id) #詳細ページに遷移
+      render :show
     else
-        @menus = Menu.all #menuの情報全部取得
-        @genres = Genre.all #genreの情報全部取得
-        render :new
+      @menus = Menu.all #menuの情報全部取得
+      @genres = Genre.all #genreの情報全部取得
+      render :new
     end
   end
 
