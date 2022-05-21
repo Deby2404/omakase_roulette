@@ -6,11 +6,12 @@ class Public::DayRandomsController < ApplicationController
 
   def create
     @menus = Menu.order("RANDOM()").where(genre_id: menu_params[:genre_id]).where(food_status: menu_params[:food_status]).limit(1)
-    if @menus.blank?
-      flash[:danger] = ["食事もしくはジャンルが選択されていません"]
-      redirect_to request.referer
-    else
+    if @menus.present?
       redirect_to public_day_random_path(@menus.ids) #詳細ページに遷移
+    else
+        @menu = Menu.all #menuの情報全部取得
+        @genre = Genre.all #genreの情報全部取得
+        render :new
     end
   end
 
