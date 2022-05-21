@@ -15,57 +15,85 @@
       <tr>
         <th>月曜日</th>
         <td><%= @menu['mon'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['mon'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['mon'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['mon'][0].food_status_i18n %></td>
         <td><%= @menu['mon'][0].genre.name %></td>
       </tr>
       <tr>
         <th>火曜日</th>
         <td><%= @menu['tue'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['tue'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['tue'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['tue'][0].food_status_i18n %></td>
         <td><%= @menu['tue'][0].genre.name %></td>
       </tr>
       <tr>
         <th>水曜日</th>
         <td><%= @menu['wed'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['wed'][0]), class: "btn btn-primary" %></td>
+       <td>
+          <%= link_to public_menu_path(@menu['wed'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['wed'][0].food_status_i18n %></td>
         <td><%= @menu['wed'][0].genre.name %></td>
       </tr>
       <tr>
         <th>木曜日</th>
         <td><%= @menu['thu'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['thu'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['thu'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['thu'][0].food_status_i18n %></td>
         <td><%= @menu['thu'][0].genre.name %></td>
       </tr>
       <tr>
         <th>金曜日</th>
         <td><%= @menu['fri'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['fri'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['fri'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['fri'][0].food_status_i18n %></td>
         <td><%= @menu['fri'][0].genre.name %></td>
       </tr>
       <tr>
         <th>土曜日</th>
         <td><%= @menu['sat'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['sat'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['sat'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['sat'][0].food_status_i18n %></td>
         <td><%= @menu['sat'][0].genre.name %></td>
       </tr>
       <tr>
         <th>日曜日</th>
         <td><%= @menu['sun'][0].name %></td>
-        <td><%= link_to "献立を見る", public_menu_path(@menu['sun'][0]), class: "btn btn-primary" %></td>
+        <td>
+          <%= link_to public_menu_path(@menu['sun'][0]) do %>
+            <div class="show-btn">献立を見る</div>
+          <% end %>
+        </td>
         <td><%= @menu['sun'][0].food_status_i18n %></td>
         <td><%= @menu['sun'][0].genre.name %></td>
       </tr>
      </tbody>
     </table>
   </div>
-  <div class="text-right pr-5">
-    <%= link_to "再度おまかせ", new_public_week_random_path, class: "btn btn-lg btn-warning rounded-pill"  %>
+  <div class="text-right pr-5 pb-5">
+    <%= link_to "再度おまかせ", new_public_week_random_path, class: "btn btn-lg btn-info"  %>
   </div>
 </div>
 
