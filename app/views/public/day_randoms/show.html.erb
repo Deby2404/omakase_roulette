@@ -2,29 +2,29 @@
  <h1 class="text-center pt-4">1日分の献立</h1>
  
  <div class="d-flex justify-content-center">
-  <div><%= image_tag @menus.image, size: "500x400" %></div>
+  <div><%= image_tag @menu.image, size: "500x400" %></div>
 
   <div class>
    <table class="table table-borderless">
      <tr>
        <th class="table-menu">献立名</th>
-       <td><%= @menus.name %></td>
+       <td><%= @menu.name %></td>
      </tr>
      <tr>
        <th>主食</th>
-       <td><%= @menus.syusyoku %></td>
+       <td><%= @menu.syusyoku %></td>
      </tr>
      <tr>
        <th>主菜</th>
-       <td><%= @menus.syusai %></td>
+       <td><%= @menu.syusai %></td>
      </tr>
      <tr>
        <th>副菜</th>
-       <td><%= @menus.fukusai %></td>
+       <td><%= @menu.fukusai %></td>
      </tr>
      <tr>
        <th>作り方</th>
-       <td class="border text-justify"><%= @menus.introduction %></td>
+       <td class="border text-justify"><%= @menu.introduction %></td>
      </tr>
     </table>
   </div>

@@ -1,7 +1,7 @@
 class Public::MenusController < ApplicationController
   def new
     @menu = Menu.new
-    @genre = Genre.all
+    @genres = Genre.all
   end
 
   def create
@@ -21,7 +21,7 @@ class Public::MenusController < ApplicationController
 
   def edit
     @menu = Menu.find(params[:id])
-    @genre = Genre.all
+    @genres = Genre.all
   end
 
   def update
