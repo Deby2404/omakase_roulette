@@ -5,10 +5,11 @@
 * 登録をした場合は料理の投稿ができます。投稿した料理はルーレットに組み込まれます。
 
 ### サイトテーマ
-* ランダムに献立を表示できるサイトです
+* ランダムに献立を提示するアプリケーションです。
 
 ### テーマを選んだ理由
-* 母が「毎日の献立を考えるのが大変」と言っていたのを思い出し、主婦を助けたいとこちらのサイトを考案しました。
+* 母が「毎日献立を考えるのが大変」、「なんでもいいと言われても困る」と言っていたのを思い出し、
+  考えなくて済むようなアプリケーションがあれば解決すると、「おまかせルーレット」の作成を決断しました。
 
 ### ターゲットユーザ
 * 主婦
@@ -20,9 +21,11 @@
 
 ## 設計書
 * ワイヤーフレーム
-* ER図
-* 画面遷移図
 https://app.moqups.com/gYYBJdUUT6ckCy1ZyJZkJETA5B15Qs37/view/page/abe4a59a2
+* ER図
+https://drive.google.com/file/d/1decRn3pz8qYzWba5LBWq81QgidJEhkiK/view?usp=sharing
+* 画面遷移図
+https://drive.google.com/file/d/1EMiW_p-1LUudjFSUFPT32pdzUM-qhHLX/view?usp=sharing
 * テーブル提議書
 https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3bbE/edit?usp=sharing
 

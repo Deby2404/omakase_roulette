@@ -15,3 +15,5 @@ Genre.create(name: "洋食")
 Genre.create(name: "中華")
 Genre.create(name: "その他")
 
+
+
