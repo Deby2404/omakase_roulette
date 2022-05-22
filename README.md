@@ -1,5 +1,5 @@
 # おまかせルーレット
-##サイトURL
+
 
 ## サイト概要
 * 1日の献立もしくは１週間分の献立から選びます。朝飯、昼飯、晩飯を選択し、料理のジャンルを選択したら自動的に献立を表示します。
@@ -31,9 +31,9 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
 
 ## 開発環境
 - フロントエンド
-　- Bootstrap4.5
-　- SCSS
-　- JavaScript
+  - Bootstrap4.5
+  - SCSS
+  - JavaScript
 - バックエンド
   - Ruby 2.6.3
   - Rails 6.1.5.1
@@ -42,5 +42,12 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
   - AWS
   - Nginx, Puma
 ## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
+- バックグラウンド画像
+  - Unsplash
+  - https://unsplash.com/
+- アイコン
+  - Hatchful
+  - https://hatchful.shopify.com/ja/
+## 今後追加したい機能
+- ヴィーガンやハラールフード、アレルギーのある方など誰でも使用できるようにする。
+- 全世界の方に使ってもらいたいので英語と日本語で切り替えができるようにする。
