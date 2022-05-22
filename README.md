@@ -45,7 +45,7 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
 - バックグラウンド画像
   - Unsplash
   - https://unsplash.com/
-- アイコン
+- ロゴ
   - Hatchful
   - https://hatchful.shopify.com/ja/
 ## 今後追加したい機能
