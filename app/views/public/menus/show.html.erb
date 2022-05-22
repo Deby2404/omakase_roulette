@@ -1,15 +1,15 @@
 <div class="random-show">
- <div class="d-flex justify-content-center row">
-  <div class="col-xs-12 mx-5 mt-3">
+ <div class="row offset-xs-3 pt-3 pl-2">
+  <div>
      <% if @menu.image.attached? %>
       <%= image_tag @menu.image, size: "500x400" %>
      <% else %>
       <%= image_tag 'no_img', size: "500x400" %>
      <% end %>
   </div>
-  
-  <div class="col-xs-12 offset-md-3">
-   <table class="table table-borderless mt-5 ml-5 col-8">
+
+  <div>
+   <table class="table table-borderless mt-5 ml-5 col-12">
     <tr>
        <th class="pr-5">食事</th>
        <td><%= @menu.food_status_i18n %></td>
@@ -40,10 +40,9 @@
      </tr>
     </table>
   </div>
-   
-  
-
  </div>
+
+
  <div class="text-center pt-5">
   <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
    <div class="text-center">

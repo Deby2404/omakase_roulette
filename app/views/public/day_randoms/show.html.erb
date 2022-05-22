@@ -1,13 +1,13 @@
 <div class="random-show">
  <h1 class="text-center pt-4">1日分の献立</h1>
- 
- <div class="d-flex justify-content-center">
+
+ <div class="row offset-xs-3 pt-3 pl-2">
   <div><%= image_tag @menu.image, size: "500x400" %></div>
 
   <div class>
-   <table class="table table-borderless">
+   <table class="table table-borderless mt-5 ml-5 col-12">
      <tr>
-       <th class="table-menu">献立名</th>
+       <th class="pr-5">献立名</th>
        <td><%= @menu.name %></td>
      </tr>
      <tr>
