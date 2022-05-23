@@ -63,6 +63,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
+gem 'omniauth', '1.9.1'
 group :production do
   gem 'mysql2'
 end

@@ -1,5 +1,6 @@
+  # frozen_string_literal: true
 class Public::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-
+  # callback for google
   def google_oauth2
     callback_for(:google)
   end

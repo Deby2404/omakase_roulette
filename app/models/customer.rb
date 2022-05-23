@@ -7,6 +7,7 @@ class Customer < ApplicationRecord
 
   has_many:menus, dependent: :destroy
   has_many :contact, dependent: :destroy
+  #has_many :sns, dependent: :destroy
 
   validates :name, presence: true
 
@@ -22,13 +23,17 @@ class Customer < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    customer = find_by(email: auth.info.email)
+    if customer
+      customer.update(provider: auth.provider, uid: auth.uid)
+    end
 
-      user.name = auth.info.name
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |customer|
+      # deviseのuserカラムに name を追加している場合は以下のコメントアウトも追記します
+      customer.name = auth.info.name
+      customer.email = auth.info.email
+      customer.password = Devise.friendly_token[0,20]
     end
   end
-
 end
 
