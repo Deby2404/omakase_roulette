@@ -7,6 +7,8 @@
 <% end %>
 
 <%- if devise_mapping.omniauthable? %>
-    <%= link_to 'Sign in with Google', customer_google_oauth2_omniauth_authorize_path %>
+    <%= link_to customer_google_oauth2_omniauth_authorize_path do %>
+      <i class="fa-brands fa-google"></i> Sign in with Google
+    <% end %>
 <% end %>
 
