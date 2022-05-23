@@ -20,8 +20,10 @@ Rails.application.routes.draw do
   devise_for :customers, skip: [:passwords], controllers: {
     registrations:"public/registrations",
     passwords:'public/settings/passwords',
-    sessions:"public/sessions"
+    sessions:"public/sessions",
+    omniauth_callbacks:"public/omniauth_callbacks"
   }
+
 
   namespace :public do
     get "/customers/my_page" => "customers#show", as: 'my_page' #会員情報詳細ページ（マイページ）表示
