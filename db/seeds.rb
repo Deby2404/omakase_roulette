@@ -10,10 +10,8 @@ Admin.create!(
   password: 'admin111'
   )
 
-Genre.create(name: "和食")
-Genre.create(name: "洋食")
-Genre.create(name: "中華")
-Genre.create(name: "その他")
-
-
+Genre.create!(name: "和食")
+Genre.create!(name: "洋食")
+Genre.create!(name: "中華")
+Genre.create!(name: "その他")
 

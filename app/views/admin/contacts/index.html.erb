@@ -1,18 +1,18 @@
 <h2 class="text-center">お問い合わせ一覧</h2>
     <table class="table">
-        <thead>
+    <thead>
         <tr>
-        <th>ユーザー名</th>
-        <th>問い合わせタイトル</th>
-        <th>受信日</th>
-        <th></th>
-        <th></th>
+           <th>ユーザー名</th>
+           <th>問い合わせタイトル</th>
+           <th>受信日</th>
+           <th></th>
+           <th></th>
         </tr>
     </thead>
     <tbody>
-        <% @customers.each do |customer| %>
-            <% customer.contact.each do |contact| %>
-              <tr>
+    <% @customers.each do |customer| %>
+        <% customer.contact.each do |contact| %>
+            <tr>
                 <td><%= contact.customer.name %></td>
                 <td><%= contact.title %></td>
                 <td><%= contact.created_at.strftime("%Y年%m月%d日 ") %></td>
@@ -21,8 +21,8 @@
                       <i class="fa-solid fa-trash-can"></i>
                     <% end %>
                 </td>
-              </tr>
-            <% end %>
-       <% end %>
+            </tr>
+        <% end %>
+    <% end %>
     </tbody>
 </table>

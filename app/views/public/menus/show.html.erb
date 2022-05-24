@@ -10,11 +10,11 @@
 
   <div>
    <table class="table table-borderless mt-5 ml-5 col-12">
-    <tr>
+     <tr>
        <th class="pr-5">食事</th>
        <td><%= @menu.food_status_i18n %></td>
      </tr>
-    <tr>
+     <tr>
        <th>ジャンル</th>
        <td><%= @menu.genre.name %></td>
      </tr>
@@ -38,10 +38,9 @@
        <th>作り方</th>
        <td class="border text-justify"><%= @menu.introduction %></td>
      </tr>
-    </table>
+   </table>
   </div>
  </div>
-
 
  <div class="text-center pt-5">
   <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
@@ -49,6 +48,6 @@
      <%= link_to edit_public_menu_path(@menu.id), class: "btn btn-lg btn-warning" do %>
        <i class="fa-solid fa-pen-to-square"></i> 編集
      <% end %>
+   </div>
   <% end %>
  </div>
-</div>

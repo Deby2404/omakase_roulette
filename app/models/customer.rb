@@ -10,7 +10,7 @@ class Customer < ApplicationRecord
 
   validates :name, presence: true
 
-  def active_for_authentication? # is_deletedがfalseならtrueを返すようにしている
+  def active_for_authentication?
     super && (is_deleted == false)
   end
 
@@ -28,7 +28,6 @@ class Customer < ApplicationRecord
     end
 
     where(provider: auth.provider, uid: auth.uid).first_or_create do |customer|
-      # deviseのuserカラムに name を追加している場合は以下のコメントアウトも追記します
       customer.name = auth.info.name
       customer.email = auth.info.email
       customer.password = Devise.friendly_token[0,20]

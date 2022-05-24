@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get 'homes/top'
     resources :customers, only:[:index,:show]
     resources :genres, only:[:new,:create,:edit,:update,:destroy]
     resources :contacts, only:[:index,:edit,:update,:destroy]

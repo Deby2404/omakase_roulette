@@ -1,65 +1,65 @@
 <div class="text-center">
-   <div class="background">
-    <div class="background-content">
-      <% if customer_signed_in? %>
-        <h5 class="text-white pt-5">
-          毎日献立を考えるのがめんどすさい！何を作ればいいかわからない！</br>
-          そんな時こそ「おまかせルーレット」をご使用ください！</br>
-          「おまかせルーレット」はランダムな献立を提示します
-        </h5>
-        <div class="d-flex justify-content-center">
-          <div class="mt-5 mr-5">
-            <%= link_to new_public_day_random_path do %>
-              <div class="food-btn">1日分の献立</div>
-            <% end %>
+    <div class="background">
+      <div class="background-content">
+        <% if customer_signed_in? %>
+          <h5 class="text-white pt-5">
+            毎日献立を考えるのがめんどすさい！何を作ればいいかわからない！</br>
+            そんな時こそ「おまかせルーレット」をご使用ください！</br>
+            「おまかせルーレット」はランダムな献立を提示します
+          </h5>
+          <div class="d-flex justify-content-center">
+            <div class="mt-5 mr-5">
+              <%= link_to new_public_day_random_path do %>
+                <div class="food-btn">1日分の献立</div>
+              <% end %>
+            </div>
+            <div class="mt-5">
+              <%= link_to new_public_week_random_path do %>
+                <div class="food-btn">1週間分の献立</div>
+              <% end %>
+            </div>
           </div>
-          <div class="mt-5">
-            <%= link_to new_public_week_random_path do %>
-              <div class="food-btn">1週間分の献立</div>
-            <% end %>
-          </div>
-        </div>
-       <% elsif %>
-        <h5 class="text-white pt-5">
-         登録していただいた方は献立の投稿が可能です</br>
-         投稿される方のみ新規登録をお願い致します
-        </h5>
-        <div class="user-btn d-flex justify-content-center">
-          <div class="mt-4 mr-5 mb-5">
-            <%= link_to new_customer_registration_path do %>
-              <div class="btn sign_up-btn">新規登録</div>
-            <% end %>
-          </div>
-          <div class="mt-4 mr-5 mb-5">
-            <%= link_to new_customer_session_path do %>
-              <div class="btn sign_in-btn">ログイン</div>
-            <% end %>
-          </div>
-          <div class="mt-4 mr-5 mb-5">
-            <%= link_to public_guest_sign_in_path, method: :post do %>
-              <div class="btn sign_in-btn">ゲストログイン（閲覧用）</div>
-            <% end %>
-          </div>
-        </div>
-        <h5 class="text-white">
-         毎日献立を考えるのがめんどくさい！何を作ればいいかわからない！</br>
-         そんな時こそ「おまかせルーレット」をご使用ください！</br>
-         「おまかせルーレット」はランダムな献立を提示します
-        </h5>
-        <div class="d-flex justify-content-center">
-          <div class="mt-5 mr-5">
-            <%= link_to new_public_day_random_path do %>
-              <div class="food-btn">1日分の献立</div>
-            <% end %>
-          </div>
-          <div class="mt-5">
-            <%= link_to new_public_week_random_path do %>
-              <div class="food-btn">1週間分の献立</div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+          <% elsif %>
+            <h5 class="text-white pt-5">
+             登録していただいた方は献立の投稿が可能です</br>
+             投稿される方のみ新規登録をお願い致します
+            </h5>
+            <div class="user-btn d-flex justify-content-center">
+              <div class="mt-4 mr-5 mb-5">
+                <%= link_to new_customer_registration_path do %>
+                  <div class="btn sign_up-btn">新規登録</div>
+                <% end %>
+              </div>
+              <div class="mt-4 mr-5 mb-5">
+                <%= link_to new_customer_session_path do %>
+                  <div class="btn sign_in-btn">ログイン</div>
+                <% end %>
+              </div>
+              <div class="mt-4 mr-5 mb-5">
+                <%= link_to public_guest_sign_in_path, method: :post do %>
+                  <div class="btn sign_in-btn">ゲストログイン（閲覧用）</div>
+                <% end %>
+              </div>
+            </div>
+            <h5 class="text-white">
+             毎日献立を考えるのがめんどくさい！何を作ればいいかわからない！</br>
+             そんな時こそ「おまかせルーレット」をご使用ください！</br>
+             「おまかせルーレット」はランダムな献立を提示します
+            </h5>
+            <div class="d-flex justify-content-center">
+              <div class="mt-5 mr-5">
+                <%= link_to new_public_day_random_path do %>
+                  <div class="food-btn">1日分の献立</div>
+                <% end %>
+              </div>
+              <div class="mt-5">
+                <%= link_to new_public_week_random_path do %>
+                  <div class="food-btn">1週間分の献立</div>
+                <% end %>
+              </div>
+            </div>
+        <% end %>
+      </div>
    </div>
 </div>
 
