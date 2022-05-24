@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
   - MySQL2
   - AWS
   - Nginx, Puma
-## 機能一蘭
+## 機能一覧
 - ゲストログイン機能
 - 会員機能
 - 投稿機能
