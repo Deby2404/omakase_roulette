@@ -7,7 +7,6 @@ class Customer < ApplicationRecord
 
   has_many:menus, dependent: :destroy
   has_many :contact, dependent: :destroy
-  #has_many :sns, dependent: :destroy
 
   validates :name, presence: true
 

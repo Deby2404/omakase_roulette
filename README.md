@@ -41,6 +41,14 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
   - MySQL2
   - AWS
   - Nginx, Puma
+## 機能一蘭
+- ゲストログイン機能
+- 会員機能
+- 投稿機能
+- ユーザー管理機能
+- お問い合わせ機能
+- 通知機能
+- SNS認証機能(Google)
 ## 使用素材
 - バックグラウンド画像
   - Unsplash
