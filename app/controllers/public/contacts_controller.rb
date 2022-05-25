@@ -8,13 +8,13 @@ class  Public::ContactsController < ApplicationController
     @contact.customer_id = current_customer.id
     @contact.notifications.build
     if @contact.save
+      flash[:notice] = "送信しました"
       redirect_to root_path
     else
       @contacts = Contact.all
       @customers = Customer.all
       render :new
     end
-      flash[:success] = '返信しました'
   end
 
   private

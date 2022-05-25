@@ -23,6 +23,7 @@ class Public::WeekRandomsController < ApplicationController
       render :show
     else
       @genres = Genre.all
+      flash.now[:alert] = "全てのジャンルを選択して下さい"
       render :new
     end
   end

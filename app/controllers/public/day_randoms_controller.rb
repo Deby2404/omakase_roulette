@@ -10,8 +10,9 @@ class Public::DayRandomsController < ApplicationController
     if @menu.present?
       redirect_to public_day_random_path(@menu.ids)
     else
-      @menus = Menu.all #menuの情報全部取得
-      @genres = Genre.all #genreの情報全部取得
+      @menus = Menu.all
+      @genres = Genre.all
+      flash.now[:alert] = "ジャンルを選択して下さい"
       render :new
     end
   end
