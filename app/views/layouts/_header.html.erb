@@ -14,28 +14,28 @@
             <li>
               <%= link_to destroy_customer_session_path, method: :delete  do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-right-from-bracket"></i> ログアウト
+                  LOG OUT
                 </div>
               <% end %>
             </li>
             <li>
               <%= link_to public_my_page_path do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-user"></i> マイページ
+                  MY PAGE
                 </div>
               <% end %>
             </li>
             <li>
               <%= link_to root_path do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-house"></i> トップページ
+                  TOP
                 </div>
               <% end %>
             </li>
             <li>
               <%= link_to new_public_menu_path do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-file-pen"></i> 新規投稿
+                  NEW MENU
                 </div>
               <% end %>
             </li>
@@ -43,21 +43,21 @@
             <li>
               <%= link_to destroy_admin_session_path, method: :delete do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-right-from-bracket"></i> 管理者ログアウト
+                  LOG OUT
                 </div>
               <% end %>
             </li>
             <li>
               <%= link_to new_admin_genre_path do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-bowl-food"></i> ジャンル
+                  GENRE
                 </div>
               <% end %>
             </li>
             <li>
               <%= link_to admin_customers_path do %>
                 <div class="header-btn">
-                  <i class="fa-solid fa-users"></i> 会員一覧
+                  MEMBERS
                 </div>
               <% end %>
             </li>
@@ -65,9 +65,9 @@
               <%= link_to admin_contacts_path do %>
                 <div class="header-btn">
                   <% if @unchecked_notifications.any? %>
-                    <i class="fa-solid fa-bell notification-icon fa-lg"></i>お問い合わせ
+                    <i class="fa-solid fa-bell notification-icon fa-lg"></i>MAIL
                   <% else %>
-                    お問い合わせ
+                    MAIL
                   <% end %>
                 </div>
               <% end %>
