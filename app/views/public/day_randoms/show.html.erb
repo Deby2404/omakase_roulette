@@ -22,12 +22,12 @@
       </tr>
       <tr>
         <th>作り方</th>
-        <td class="border text-justify"><%= @menu.introduction %></td>
+        <td class="border text-justify"><%=safe_join(@menu.introduction.split("\n"),tag(:br))%></td>
       </tr>
      </table>
    </div>
   </div>
-  
+
   <div class="text-center pt-5">
    <%= link_to "再度おまかせ", new_public_day_random_path, class: "btn btn-info"  %>
   </div>
