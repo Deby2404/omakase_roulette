@@ -1,35 +1,33 @@
-<div class="random-show">
- <h1 class="text-center pt-4">1日分の献立</h1>
-  <div class="row offset-md-2 pt-3 pl-2">
-   <div><%= image_tag @menu.image, size: "600x400" %></div>
-   <div class>
-    <table class="table table-borderless mt-5 ml-5 col-12">
-      <tr>
-        <th class="pr-5">献立名</th>
-        <td><%= @menu.name %></td>
-      </tr>
-      <tr>
-        <th>主食</th>
-        <td><%= @menu.syusyoku %></td>
-      </tr>
-      <tr>
-        <th>主菜</th>
-        <td><%= @menu.syusai %></td>
-      </tr>
-      <tr>
-        <th>副菜</th>
-        <td><%= @menu.fukusai %></td>
-      </tr>
-      <tr>
-        <th>作り方</th>
-        <td class="border text-justify"><%=safe_join(@menu.introduction.split("\n"),tag(:br))%></td>
-      </tr>
-     </table>
-   </div>
-  </div>
-
-  <div class="text-center pt-5">
-   <%= link_to "再度おまかせ", new_public_day_random_path, class: "btn btn-info"  %>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"><%= image_tag @menu.image, size: "500x400" %></div>
+        <table class="table table-borderless col-md-6">
+          <tr>
+            <th>献立名</th>
+            <td><%= @menu.name %></td>
+          </tr>
+          <tr>
+            <th>主食</th>
+            <td><%= @menu.syusyoku %></td>
+          </tr>
+          <tr>
+            <th>主菜</th>
+            <td><%= @menu.syusai %></td>
+          </tr>
+          <tr>
+            <th>副菜</th>
+            <td><%= @menu.fukusai %></td>
+          </tr>
+          <tr>
+            <th>作り方</th>
+            <td class="border"><%=safe_join(@menu.introduction.split("\n"),tag(:br))%></td>
+          </tr>
+        </table>
+    </div>
 </div>
+
+<div class="text-center pt-5">
+  <%= link_to "再度おまかせ", new_public_day_random_path, class: "btn btn-info"  %>
+</div>
+
 

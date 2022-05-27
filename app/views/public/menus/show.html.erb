@@ -1,15 +1,13 @@
-<div class="random-show">
- <div class="row offset-md-3 pt-3 pl-2">
-  <div>
+<div class="container">
+ <div class="row">
+   <div class="col-md-6">
      <% if @menu.image.attached? %>
       <%= image_tag @menu.image, size: "500x400" %>
      <% else %>
       <%= image_tag 'no_img', size: "500x400" %>
      <% end %>
   </div>
-
-  <div>
-   <table class="table table-borderless mt-5 ml-5 col-12">
+  <table class="table table-borderless col-md-6">
      <tr>
        <th class="pr-5">食事</th>
        <td><%= @menu.food_status_i18n %></td>
@@ -39,9 +37,9 @@
        <td class="border text-justify"><%=safe_join(@menu.introduction.split("\n"),tag(:br))%></td>
      </tr>
    </table>
-  </div>
  </div>
-
+</div>
+  
  <div class="text-center pt-5">
   <% if customer_signed_in? && current_customer.id == @menu.customer_id  %>
    <div class="text-center">
