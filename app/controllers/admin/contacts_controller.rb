@@ -22,7 +22,7 @@ class Admin::ContactsController < ApplicationController
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
-    @contacts = Contact.page(params[:page]).order(created_at: :desc).per(16)
+    @contacts = Contact.page(params[:page]).order(created_at: :desc).per(10)
     @customers = Customer.all
     render :index
   end
