@@ -34,6 +34,7 @@ https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3
 - 言語：HTML,CSS,JavaScript,Ruby(2.6.3),SQL
 - フレームワーク：Ruby on Rails(6.1.5.1)
 - IDE：Cloud9
+- DB : sqlite3
 ## 外部API
 - Google Cloud Platform（Googleログインで使用）
 ## 機能一覧
