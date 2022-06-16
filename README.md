@@ -9,7 +9,7 @@ http://omakaseroulette.com/
 * ランダムに献立を提示するアプリケーションです。
 
 ### テーマを選んだ理由
-* 母が「毎日献立を考えるのが大変」、「なんでもいいと言われても困る」と言っていたのを思い出し、考えなくて済むようなアプリケーションがあれば解決すると、「おまかせルーレット」の作成を決断しました。
+* 母が「毎日献立を考えるのが大変」、「なんでもいいと言われても困る」と言っていたのを思い出し、考えなくて済むようなサイトがあれば解決すると考え、「おまかせルーレット」を作成しました。
 
 ### ターゲットユーザ
 * 主婦
@@ -30,23 +30,19 @@ https://drive.google.com/file/d/1EMiW_p-1LUudjFSUFPT32pdzUM-qhHLX/view?usp=shari
 https://docs.google.com/spreadsheets/d/10SiR4_QcYZ3XOGCi7l6N3pza-kne9vgvEsaw5GB3bbE/edit?usp=sharing
 
 ## 開発環境
-- フロントエンド
-  - Bootstrap4.5
-  - SCSS
-  - JavaScript
-- バックエンド
-  - Ruby 2.6.3
-  - Rails 6.1.5.1
-- インフラ
-  - MySQL2
-  - AWS
-  - Nginx, Puma
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby(2.6.3),SQL
+- フレームワーク：Ruby on Rails(6.1.5.1)
+- IDE：Cloud9
+## 外部API
+- Google Cloud Platform（Googleログインで使用）
 ## 機能一覧
 - ゲストログイン機能
 - 会員機能
 - 投稿機能
 - ユーザー管理機能
 - お問い合わせ機能
+- メール送信機能
 - 通知機能
 - SNS認証機能(Google)
 ## 使用素材
