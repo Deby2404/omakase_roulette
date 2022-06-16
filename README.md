@@ -1,4 +1,4 @@
-# :rice:おまかせルーレット
+# :egg:おまかせルーレット
 http://omakaseroulette.com/
 <img width="1154" alt="スクリーンショット 2022-05-25 11 21 25" src="https://user-images.githubusercontent.com/98319814/170165970-96fc25f8-f17d-4c3a-8b8a-17ff53bad573.png">
 ## サイト概要
